@@ -1,0 +1,7 @@
+- task: AzureRmWebAppDeployment@3
+  inputs:
+    azureSubscription: '9d0ae4c1-3f8a-4b17-8af4-f2de1a8e3c7c'
+    WebAppName: 'foospace'
+    Package: '$(System.DefaultWorkingDirectory)'
+    GenerateWebConfig: true
+    WebConfigParameters: '-Handler iisnode -NodeStartFile server.js -appType node'
